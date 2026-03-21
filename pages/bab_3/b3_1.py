@@ -1,31 +1,177 @@
 import streamlit as st
-import plotly.express as px
-import numpy as np
+import pandas as pd
 
-st.header("3.1 Linear Regression")
+st.set_page_config(layout="wide")
 
-st.subheader("Teori Singkat")
-st.write("Linear Regression mencari garis terbaik (y = mx + c) yang meminimalkan error terhadap data.")
+# ========== CSS untuk background kolom pertama ==========
+st.markdown(
+    """
+    <style>
+    /* Target container utama di kolom pertama */
+    .stColumn:first-child > div:first-child {
+        background-color: #FBEFEF;   /* pink muda */
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .stColumn:first-child .stContainer {
+        background-color: transparent;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-# Visualisasi interaktif
-st.subheader("Simulasi Interaktif")
-m = st.slider("Slope (m)", -5.0, 5.0, 2.0, 0.1)
-c = st.slider("Intercept (c)", -10.0, 10.0, 1.0, 0.1)
+cols = st.columns([0.7, 0.3])
 
-x = np.linspace(0, 10, 100)
-y_true = 2 * x + 1 + np.random.normal(0, 2, 100)  # Data dummy
-y_pred = m * x + c
+# ================== KOLOM MATERI UTAMA ==================
+with cols[0].container(border=True):
+    st.title("Robot Otonom")
 
-fig = px.scatter(x=x, y=y_true, title="Simulasi Linear Regression")
-fig.add_scatter(x=x, y=y_pred, mode='lines', name='Prediksi')
-st.plotly_chart(fig)
+    # Bagian 1: Pengantar Robot Otonom
+    with st.container(border=True):
+        st.markdown(
+            """
+            Dengan terus berkembangnya teknologi dan ditemukannya internet, menjadi dasar 
+            terbukanya gerbang menuju **revolusi industri 4.0**. Robot menjadi salah satu 
+            teknologi kunci yang terus berkembang dengan tidak hanya mengedepankan prinsip 
+            kecepatan, tetapi juga ketepatan. Hal tersebut mendasari tercetusnya konsep 
+            **robot otonom**.
+            """
+        )
 
-# Latihan sederhana
-st.subheader("Latihan Cepat")
-prediksi = st.number_input("Prediksi y jika x=7 (dengan model y = 2x + 1)", value=0.0)
-if st.button("Cek Jawaban"):
-    jawaban_benar = 2*7 + 1
-    if abs(prediksi - jawaban_benar) < 0.1:
-        st.success("Benar! y = 15")
-    else:
-        st.error(f"Salah. Jawaban benar: {jawaban_benar}")
+    # Bagian 2: Definisi dan Cara Kerja
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🤖 Definisi Robot Otonom
+
+            **Robot otonom** adalah robot yang bekerja mandiri tanpa harus dikontrol langsung 
+            oleh manusia. Robot ini terdiri atas kumpulan sistem yang saling bekerja sama, 
+            di mana tiap-tiap bagian dapat saling berkomunikasi.
+
+            **Cara kerja:**
+            - Robot otonom menggunakan **komputer pusat** untuk memproses data yang diterima oleh sensor.
+            - Dengan menggunakan algoritma yang berbeda-beda, komputer menentukan tindakan yang harus diambil.
+            - Komputer pusat kemudian memerintahkan sistem untuk melakukan tindakan yang sesuai.
+
+            Robot otonom dirancang untuk **menangani lingkungannya sendiri** dan bekerja untuk 
+            waktu yang lama tanpa campur tangan manusia. Mereka memiliki fitur-fitur canggih 
+            untuk memahami lingkungan fisik dan mengotomatisasi tugas-tugas yang sebelumnya 
+            dilakukan manual.
+            """
+        )
+
+    # Gambar III.1
+    with st.container(border=True):
+        st.image("https://via.placeholder.com/600x300?text=Gambar+III.1+-+Robotic+Scrubber+Drier+di+Bandara+Soekarno-Hatta", use_container_width=True)
+        st.caption(
+            "Gambar III.1 – Robotic Scrubber Drier yang Bisa Dioperasikan secara Otonom di Terminal 3 Bandara Soekarno-Hatta "
+            "(Sumber: tribunnews.com)"
+        )
+
+    # Bagian 3: Perbandingan dengan AGV
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🔄 Perbandingan Autonomous Robot vs AGV
+
+            **Autonomous Robot** memiliki keunggulan besar dalam fleksibilitas, kompatibilitas, 
+            dan kontrol dibandingkan dengan **AGV (Automated Guided Vehicle)**.
+            """
+        )
+
+        # Tabel perbandingan
+        perbandingan_data = {
+            "Aspek": ["Navigasi", "Maneuver", "Perubahan Infrastruktur", "Jalur"],
+            "AGV": [
+                "Membutuhkan 'track' (magnetic tape/kabel di lantai)",
+                "Tidak dapat bermanuver di sekitar rintangan",
+                "Memerlukan perubahan fisik untuk memperluas/memodifikasi jalur",
+                "Jalur tetap"
+            ],
+            "Autonomous Robot": [
+                "Navigasi otonom tanpa 'track'",
+                "Dapat melakukan perjalanan aman di sekitar orang dan rintangan",
+                "Tidak memerlukan perubahan infrastruktur",
+                "Menavigasi secara dinamis menggunakan peta fasilitas"
+            ]
+        }
+        df_perbandingan = pd.DataFrame(perbandingan_data)
+        st.table(df_perbandingan)
+
+    # Bagian 4: Contoh Penggunaan
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🏭 Contoh Penggunaan Robot Otonom
+
+            - **Robot pengiriman** yang dapat menggunakan lift dan bergerak di seluruh gedung bertingkat.
+            - **Robot pembersih** seperti Robotic Scrubber Drier di bandara.
+            - Robot yang bekerja di lingkungan industri, gudang, dan rumah sakit.
+            """
+        )
+
+# ================== KOLOM KEY TAKEAWAYS ==================
+with cols[1].container(border=True):
+    st.subheader("🎯 Key Takeaways")
+
+    with st.expander("📌 Definisi Robot Otonom", expanded=True):
+        st.markdown(
+            """
+            - Robot yang bekerja **mandiri** tanpa kontrol langsung manusia.
+            - Menggunakan **komputer pusat** dan sensor untuk memproses data.
+            - Bekerja dalam waktu lama tanpa intervensi manusia.
+            """
+        )
+
+    with st.expander("⚙️ Cara Kerja"):
+        st.markdown(
+            """
+            1. Sensor mengumpulkan data lingkungan.
+            2. Komputer pusat memproses data dengan algoritma.
+            3. Komputer memerintahkan aktuator untuk bertindak.
+            """
+        )
+
+    with st.expander("🆚 Perbandingan dengan AGV"):
+        st.markdown(
+            """
+            **AGV**:
+            - Butuh track magnetik/kabel
+            - Tidak bisa hindari rintangan
+            - Perlu perubahan infrastruktur
+            - Jalur tetap
+
+            **Autonomous Robot**:
+            - Navigasi otonom
+            - Bisa hindari rintangan & orang
+            - Tanpa perubahan infrastruktur
+            - Navigasi dinamis dengan peta
+            """
+        )
+
+    with st.expander("🏢 Contoh Aplikasi"):
+        st.markdown(
+            """
+            - Robot pembersih di bandara
+            - Robot pengiriman di gedung
+            - Robot industri dan logistik
+            """
+        )
+
+    # Fakta singkat
+    with st.container(border=True):
+        st.markdown("### 📊 Fakta Singkat")
+        st.metric("Komponen Utama", "Sensor, Komputer Pusat, Aktuator")
+        st.metric("Keunggulan vs AGV", "Fleksibel, Dinamis, Tanpa Track")
+
+    # Referensi
+    with st.container(border=True):
+        st.markdown("### 📚 Referensi")
+        st.markdown(
+            """
+            - tribunnews.com (gambar robot pembersih)
+            - Materi kuliah robotika dan industri 4.0
+            """
+        )

@@ -1,197 +1,218 @@
 import streamlit as st
-import streamlit.components.v1 as components
-import numpy as np
-from sklearn.cluster import KMeans
-import plotly.express as px
+import pandas as pd
 
+st.set_page_config(layout="wide")
 
-st.set_page_config(
-    page_title="Simulasi IoT & ML",
-    layout="wide"
+# ========== CSS untuk background kolom pertama ==========
+st.markdown(
+    """
+    <style>
+    /* Target container utama di kolom pertama */
+    .stColumn:first-child > div:first-child {
+        background-color: #FBEFEF;   /* pink muda */
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .stColumn:first-child .stContainer {
+        background-color: transparent;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
 
+cols = st.columns([0.7, 0.3])
 
-st.title("🎥 Video Pendukung Pembelajaran")
-st.caption("Penjelasan konsep dan penerapan terkait simulasi yang telah dilakukan")
+# ================== KOLOM MATERI UTAMA ==================
+with cols[0].container(border=True):
+    st.title("Definisi, Konsep, dan Pilar Internet of Things")
 
-st.video("https://www.youtube.com/watch?v=X6Tj2PT41v8")
+    # Bagian 1: Definisi IoT (Hung, 2017)
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 📌 Definisi Internet of Things
 
+            Menurut **Hung, M. (2017)** – Wakil Presiden Gartner Research –  
+            *Internet of Things (IoT)* adalah **jaringan objek fisik khusus** yang mengandung 
+            **teknologi tertanam** (*embedded technology*) untuk berkomunikasi, merasakan 
+            (*sensing*), atau berinteraksi dengan keadaan internal atau lingkungan eksternal.
 
-st.divider()
+            Jaringan ini menghubungkan **aset, proses, dan personel**, memungkinkan 
+            pengambilan data dan peristiwa, sehingga perusahaan dapat mempelajari perilaku, 
+            melakukan tindakan pencegahan, atau menambah bahkan mengubah proses bisnisnya.
+            """
+        )
 
-st.title("🔧 Simulasi IoT")
-st.caption("Eksplorasi rangkaian IoT secara interaktif menggunakan simulator")
+    # Bagian 2: Konsep Kerja IoT
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### ⚙️ Konsep Kerja IoT
 
-components.iframe(
-    src="https://wokwi.com/projects/321525495180034642",
-    height=700,
-    scrolling=True
-)
+            IoT berkembang dari konvergensi **teknologi nirkabel**, 
+            **micro‑electromechanical systems (MEMS)**, dan **internet**.
 
-st.divider()
-st.title("🧠 Simulasi Machine Learning – K-Means")
-st.caption("Ubah parameter dan amati perubahan hasil clustering")
+            Tiga elemen utama dalam konsep kerja IoT (sumber: mobnasesemka.com):
+            1. **Barang fisik** yang dilengkapi modul IoT.
+            2. **Perangkat koneksi ke internet** seperti modem dan router wireless.
+            3. **Cloud Data Center** tempat menyimpan aplikasi beserta database.
+            """
+        )
 
-# Parameter interaktif
-col1, col2 = st.columns(2)
-with col1:
-    n_samples = st.slider("Jumlah Data", 50, 300, 150)
-with col2:
-    n_clusters = st.slider("Jumlah Cluster (k)", 2, 6, 3)
+        # Gambar II.3 (placeholder)
+        st.image("https://via.placeholder.com/600x200?text=Gambar+II.3+-+Konsep+Kerja+IoT", use_container_width=True)
+        st.caption("Gambar II.3 – Konsep Kerja IoT (Sumber: mobnasesemka.com)")
 
-# Generate data
-np.random.seed(42)
-X = np.random.rand(n_samples, 2)
+        # Gambar II.4 (placeholder)
+        st.image("https://via.placeholder.com/600x200?text=Gambar+II.4+-+Mekanisme+Kerja+IoT", use_container_width=True)
+        st.caption("Gambar II.4 – Mekanisme Kerja IoT")
 
-# KMeans
-kmeans = KMeans(n_clusters=n_clusters, n_init=10)
-labels = kmeans.fit_predict(X)
+        st.markdown(
+            """
+            Seluruh penggunaan barang yang terhubung ke internet akan menyimpan data. 
+            Data tersebut terkumpul sebagai **big data** yang kemudian dapat diolah 
+            untuk dianalisis. Hasilnya dimanfaatkan bagi kepentingan masing‑masing 
+            perusahaan/instansi untuk menemukan pengetahuan baru beserta solusinya.
+            """
+        )
 
-# Plotly scatter
-fig = px.scatter(
-    x=X[:, 0],
-    y=X[:, 1],
-    color=labels.astype(str),
-    title="Visualisasi K-Means Clustering",
-)
+    # Bagian 3: Contoh Sistem IoT
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🏭 Contoh Sistem IoT
 
-# Kontrol ukuran chart (PENTING)
-fig.update_layout(
-    height=400,              # <- ukuran sedang
-    margin=dict(l=20, r=20, t=40, b=20),
-    legend_title_text="Cluster"
-)
+            Ekosistem IoT terdiri dari **perangkat pintar** berkemampuan web yang menggunakan 
+            prosesor tertanam, sensor, dan perangkat keras komunikasi untuk mengumpulkan, 
+            mengirim, dan bertindak berdasarkan data dari lingkungan.
 
-st.plotly_chart(fig, use_container_width=True)
+            - Perangkat IoT berbagi data sensor dengan menghubungkan ke **gateway IoT** 
+              atau perangkat tepi lainnya, lalu data dikirim ke **cloud** untuk dianalisis.
+            - Perangkat juga dapat berkomunikasi langsung dengan perangkat terkait dan 
+              bertindak berdasarkan informasi yang diperoleh.
+            - Sebagian besar pekerjaan dilakukan **tanpa campur tangan manusia**, meskipun 
+              manusia dapat berinteraksi (mengatur, memberi instruksi, mengakses data).
+            """
+        )
+        st.image("https://via.placeholder.com/600x250?text=Gambar+II.5+-+Contoh+Sistem+IoT", use_container_width=True)
+        st.caption("Gambar II.5 – Contoh Sistem IoT")
 
+    # Bagian 4: Empat Pilar IoT
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🧱 Empat Pilar IoT (Khan, H.M., 2018)
 
+            IoT memiliki empat pilar utama:
+            """
+        )
 
-from sklearn.linear_model import LinearRegression
+        # Tampilkan dalam bentuk grid atau tabel
+        pilar_data = {
+            "Pilar": [
+                "**Machine to Machine (M2M)**",
+                "**Radio Frequency IDentification (RFID)**",
+                "**Wireless Sensor Network (WSN)**",
+                "**Supervisory Control And Data Acquisition (SCADA)**"
+            ],
+            "Deskripsi": [
+                "Menggunakan perangkat untuk menangkap peristiwa melalui koneksi jaringan ke server pusat, yang menerjemahkan peristiwa menjadi informasi bermakna.",
+                "Menggunakan gelombang radio untuk mentransfer data dari tag elektronik yang dilampirkan ke suatu objek ke sistem pusat melalui pembaca, untuk tujuan identifikasi dan pelacakan.",
+                "Terdiri dari sensor otonom yang didistribusikan secara spasial untuk memantau kondisi fisik atau lingkungan.",
+                "Sistem otonom berdasarkan teori loop tertutup atau sistem pintar/CPS yang menghubungkan, memantau, dan mengendalikan peralatan melalui jaringan di fasilitas seperti pabrik atau gedung."
+            ]
+        }
+        df_pilar = pd.DataFrame(pilar_data)
+        st.table(df_pilar)
 
-st.divider()
-st.title("📈 Simulasi Machine Learning – Regresi Linear")
-st.caption("Eksplorasi hubungan data dan garis regresi secara interaktif")
+        st.image("https://via.placeholder.com/500x250?text=Gambar+II.6+-+Pilar+IoT", use_container_width=True)
+        st.caption("Gambar II.6 – Pilar IoT (Sumber: IoTlearners.com)")
 
-# Parameter interaktif
-col1, col2 = st.columns(2)
-with col1:
-    n_samples_lr = st.slider("Jumlah Data", 20, 200, 80, key="lr_samples")
-with col2:
-    noise_level = st.slider("Tingkat Noise", 0.0, 1.0, 0.3, step=0.05)
+    # Bagian 5: Contoh Inovasi IoT Karya Anak Bangsa
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🇮🇩 Inovasi IoT Kreator Indonesia
 
-# Generate data
-np.random.seed(42)
-X_lr = np.linspace(0, 10, n_samples_lr).reshape(-1, 1)
-y_lr = 2.5 * X_lr.flatten() + 5 + noise_level * np.random.randn(n_samples_lr)
+            Beberapa *business model* baru dan karya unggulan di bidang IoT (Pratiwi, A., 2019):
+            """
+        )
 
-# Model regresi
-model = LinearRegression()
-model.fit(X_lr, y_lr)
-y_pred = model.predict(X_lr)
+        inovasi_data = {
+            "Produk": ["HARA", "Qlue", "Spekun", "eFishery", "Nodeflux"],
+            "Deskripsi Singkat": [
+                "Produk Dattabot untuk sektor pertanian & pangan: menangani potensi lahan, optimasi pertanian, pencegahan hama.",
+                "Layanan smart city berbasis IoT: traffic light terhubung command center, kotak sampah pintar, detektor polusi udara.",
+                "Bike sharing pertama di Indonesia (kerjasama Telkomsel & Banopolis) menggunakan NB‑IoT dan RFID untuk parkir sepeda.",
+                "Alat pemberi pakan ikan otomatis dengan penjadwalan dan dosis tepat, mencatat data real‑time, mencegah over‑feeding.",
+                "Menggabungkan AI, Machine Learning, Deep Learning di bidang Computer Vision untuk retail (pemantauan stok) dan properti (sistem parkir)."
+            ]
+        }
+        df_inovasi = pd.DataFrame(inovasi_data)
+        st.table(df_inovasi)
 
-# Plotly visualization
-fig_lr = px.scatter(
-    x=X_lr.flatten(),
-    y=y_lr,
-    title="Visualisasi Regresi Linear",
-    labels={"x": "X (Input)", "y": "Y (Output)"},
-)
+# ================== KOLOM KEY TAKEAWAYS ==================
+with cols[1].container(border=True):
+    st.subheader("🎯 Key Takeaways")
 
-fig_lr.add_scatter(
-    x=X_lr.flatten(),
-    y=y_pred,
-    mode="lines",
-    name="Garis Regresi"
-)
+    with st.expander("📌 Definisi IoT (Hung, 2017)", expanded=True):
+        st.markdown(
+            """
+            - Jaringan objek fisik dengan **teknologi tertanam** (embedded).
+            - Mampu berkomunikasi, sensing, berinteraksi dengan lingkungan.
+            - Menghubungkan aset, proses, personel.
+            - Data yang dihasilkan dapat mengubah proses bisnis.
+            """
+        )
 
-# Kontrol ukuran chart
-fig_lr.update_layout(
-    height=400,
-    margin=dict(l=20, r=20, t=40, b=20),
-    legend_title_text="Keterangan"
-)
+    with st.expander("🔧 Tiga Elemen Konsep Kerja IoT"):
+        st.markdown(
+            """
+            1. **Barang fisik** + modul IoT  
+            2. **Perangkat koneksi** (modem, router)  
+            3. **Cloud Data Center** (aplikasi & database)
+            """
+        )
 
-st.plotly_chart(fig_lr, use_container_width=True)
+    with st.expander("🧩 Empat Pilar IoT (Khan, 2018)"):
+        st.markdown(
+            """
+            - **M2M**: perangkat tangkap peristiwa → informasi.  
+            - **RFID**: identifikasi & pelacakan via gelombang radio.  
+            - **WSN**: jaringan sensor otonom untuk monitoring.  
+            - **SCADA**: kendali peralatan di fasilitas industri.
+            """
+        )
 
-# Insight singkat (edukatif)
-st.markdown(f"""
-**Persamaan Regresi:**  
-\( y = {model.coef_[0]:.2f}x + {model.intercept_:.2f} \)
-""")
+    with st.expander("💡 Contoh Inovasi IoT Indonesia"):
+        st.markdown(
+            """
+            - **HARA** : pertanian & pangan  
+            - **Qlue** : smart city (traffic light, tong sampah)  
+            - **Spekun** : bike sharing (NB‑IoT, RFID)  
+            - **eFishery** : pakan ikan otomatis  
+            - **Nodeflux** : computer vision untuk retail & properti
+            """
+        )
 
+    # Fakta singkat
+    with st.container(border=True):
+        st.markdown("### 📊 Fakta Singkat")
+        st.metric("Pilar IoT", "4 (M2M, RFID, WSN, SCADA)")
+        st.metric("Elemen Konsep IoT", "3")
+        st.metric("Inovasi Lokal", "≥5 contoh")
 
-st.divider()
-st.title("📝 Kuis Interaktif")
-st.caption("Jawab pertanyaan berikut untuk menguji pemahaman Anda")
-
-score = 0
-total = 3
-
-
-q1 = st.radio(
-    "1️⃣ Apa peran utama Internet of Things (IoT) dalam Industri 4.0?",
-    [
-        "Menggantikan seluruh tenaga kerja manusia",
-        "Menghubungkan perangkat fisik untuk mengumpulkan dan bertukar data",
-        "Hanya sebagai media penyimpanan data",
-        "Menggantikan sistem informasi konvensional"
-    ],
-    index=None
-)
-
-if q1:
-    if q1 == "Menghubungkan perangkat fisik untuk mengumpulkan dan bertukar data":
-        st.success("✅ Benar. IoT memungkinkan perangkat saling terhubung dan bertukar data.")
-        score += 1
-    else:
-        st.error("❌ Kurang tepat. IoT berfokus pada konektivitas dan pertukaran data antar perangkat.")
-
-
-q2 = st.radio(
-    "2️⃣ Pada simulasi K-Means, apa fungsi parameter *k*?",
-    [
-        "Menentukan jumlah data",
-        "Menentukan jumlah cluster",
-        "Menentukan tingkat noise",
-        "Menentukan kecepatan komputasi"
-    ],
-    index=None
-)
-
-if q2:
-    if q2 == "Menentukan jumlah cluster":
-        st.success("✅ Benar. Nilai k menentukan berapa kelompok data yang dibentuk.")
-        score += 1
-    else:
-        st.error("❌ Salah. Parameter k digunakan untuk menentukan jumlah cluster.")
-
-q3 = st.radio(
-    "3️⃣ Apa makna utama garis pada regresi linear?",
-    [
-        "Garis acak tanpa arti",
-        "Hubungan rata-rata antara variabel input dan output",
-        "Batas maksimum data",
-        "Hasil klasifikasi data"
-    ],
-    index=None
-)
-
-if q3:
-    if q3 == "Hubungan rata-rata antara variabel input dan output":
-        st.success("✅ Benar. Garis regresi merepresentasikan hubungan linear antar variabel.")
-        score += 1
-    else:
-        st.error("❌ Kurang tepat. Regresi linear memodelkan hubungan input–output.")
-
-if q1 and q2 and q3:
-    st.divider()
-    st.subheader("📊 Hasil Kuis")
-
-    st.info(f"Skor Anda: **{score} / {total}**")
-
-    if score == total:
-        st.success("🎉 Sangat baik! Anda memahami konsep IoT dan ML dengan baik.")
-    elif score >= 2:
-        st.warning("👍 Cukup baik. Silakan tinjau kembali bagian yang masih kurang.")
-    else:
-        st.error("📘 Perlu belajar ulang. Silakan ulangi simulasi dan video.")
+    # Referensi
+    with st.container(border=True):
+        st.markdown("### 📚 Referensi")
+        st.markdown(
+            """
+            - Hung, M. (2017), Gartner Research  
+            - mobnasesemka.com  
+            - Khan, H.M. (2018)  
+            - Pratiwi, A. (2019)  
+            - IoTlearners.com
+            """
+        )
