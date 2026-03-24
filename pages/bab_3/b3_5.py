@@ -9,10 +9,10 @@ st.markdown(
     <style>
     /* Target container utama di kolom pertama */
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;   /* pink muda */
+        background-color: #caf0f8;   /* pink muda */
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -43,13 +43,22 @@ with cols[0].container(border=True):
 
     # Gambar III.8, III.9, III.10
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x200?text=Gambar+III.8+-+Aplikasi+Robot+dalam+Industri", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-3/fig8.png", use_container_width=True)
         st.caption("Gambar III.8 – Aplikasi Robot dalam Industri")
 
-        st.image("https://via.placeholder.com/600x200?text=Gambar+III.9+-+Aplikasi+Robot+untuk+Welding", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-3/fig9.png", use_container_width=True)
         st.caption("Gambar III.9 – Aplikasi Robot untuk Welding (Sumber: genesis-systems.com)")
 
-        st.image("https://via.placeholder.com/600x200?text=Gambar+III.10+-+Aplikasi+Robot+pada+Industri+Perakitan+Mobil", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-3/fig10.png", use_container_width=True)
         st.caption("Gambar III.10 – Aplikasi Robot pada Industri Perakitan Mobil (Sumber: eulixe.com)")
 
     # Bagian 2: Cobot lebih detail
@@ -70,13 +79,22 @@ with cols[0].container(border=True):
 
     # Gambar III.11, III.12, III.13
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x200?text=Gambar+III.11+-+Collaborative+Robot+(Cobot)+UR3", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-3/fig11.png", use_container_width=True)
         st.caption("Gambar III.11 – Collaborative Robot (Cobot) – UR3 Robot, PT JVC Electronics Indonesia (Sumber: universal-robots.com)")
 
-        st.image("https://via.placeholder.com/600x200?text=Gambar+III.12+-+Axis+Robot", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-3/fig12.png", use_container_width=True)
         st.caption("Gambar III.12 – Axis robot (Sumber: giatuinhanh.vn)")
 
-        st.image("https://via.placeholder.com/600x200?text=Gambar+III.13+-+Macam-macam+bentuk+cobot", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-3/fig13.png", use_container_width=True)
         st.caption("Gambar III.13 – Macam-macam bentuk cobot (Sumber: zhuanlan.zhihu.com)")
 
     # Bagian 3: Investasi robot berdasarkan sasaran
@@ -120,7 +138,10 @@ with cols[0].container(border=True):
             Tingkat inteligensia antara RPA dan AI diilustrasikan pada gambar berikut.
             """
         )
-        st.image("https://via.placeholder.com/600x250?text=Gambar+III.14+-+Intelligent+Automation", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-3/fig14.png", use_container_width=True)
         st.caption("Gambar III.14 – Intelligent automation: dari RPA (process‑driven) ke ML/AI (data‑driven)")
 
 # ================== KOLOM KEY TAKEAWAYS ==================

@@ -8,10 +8,10 @@ st.markdown(
     """
     <style>
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;
+        background-color: #caf0f8;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -57,12 +57,18 @@ with cols[0].container(border=True):
 
     # Gambar IV.6
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x300?text=Gambar+IV.6+-+Diagram+Sistem+SCADA", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-4/fig6.png", use_container_width=True)
         st.caption("Gambar IV.6 – Diagram Sistem SCADA (Sumber: clue.club)")
 
     # Gambar IV.7
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x250?text=Gambar+IV.7+-+Contoh+Pengendalian+Proses+dengan+Sistem+SCADA", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-4/fig7.png", use_container_width=True)
         st.caption("Gambar IV.7 – Contoh Pengendalian Proses dengan Sistem SCADA dengan Tablet (Sumber: inductiveautomation.com)")
 
     # Perbandingan SCADA dan DCS

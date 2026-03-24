@@ -8,10 +8,10 @@ st.markdown(
     """
     <style>
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;
+        background-color: #caf0f8;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -37,7 +37,10 @@ with cols[0].container(border=True):
         )
 
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x200?text=Gambar+VI.4+-+Kerangka+Konseptual+Data+Warehouse", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-6/fig4.png", use_container_width=True)
         st.caption("Gambar VI.4 Kerangka konseptual data warehouse (Sumber: Aryuni, M., 2016)")
 
     with st.container(border=True):
@@ -50,7 +53,10 @@ with cols[0].container(border=True):
         )
 
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x200?text=Gambar+VI.5+-+Contoh+Penggunaan+Data+Mart", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-6/fig5.png", use_container_width=True)
         st.caption("Gambar VI.5 Contoh Penggunaan Data Mart (Sumber: panoply.io)")
 
     with st.container(border=True):

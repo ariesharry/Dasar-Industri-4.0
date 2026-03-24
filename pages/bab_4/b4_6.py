@@ -8,10 +8,10 @@ st.markdown(
     """
     <style>
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;
+        background-color: #caf0f8;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -38,12 +38,18 @@ with cols[0].container(border=True):
 
     # Gambar IV.11a
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x250?text=Gambar+IV.11a+-+Perubahan+Piramida+Otomatisasi+(Rev.Ind.3.0)+ke+Otomatisasi+Industri+4.0", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-4/fig11.png", use_container_width=True)
         st.caption("Gambar IV.11a – Perubahan Piramida Otomatisasi (Rev.Ind.3.0) ke Otomatisasi Industri 4.0 (Sumber: foodengineeringmag.com)")
 
     # Gambar IV.11b
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x250?text=Gambar+IV.11.b+-+Otomatisasi+Industri+4.0+berbasis+Cloud", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-4/fig12.png", use_container_width=True)
         st.caption("Gambar IV.11.b – Otomatisasi Industri 4.0 berbasis Cloud (Sumber: www.plattform-i40.de)")
 
     # Penjelasan level cloud
@@ -83,7 +89,10 @@ with cols[0].container(border=True):
 
     # Gambar IV.12
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x300?text=Gambar+IV.12+-+CPS+pada+Integrasi+Vertical+dan+Horizontal", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-4/fig13.png", use_container_width=True)
         st.caption("Gambar IV.12 – CPS pada Integrasi Vertikal dan Horizontal")
 
 # ================== KOLOM KEY TAKEAWAYS ==================

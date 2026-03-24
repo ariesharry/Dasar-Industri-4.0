@@ -7,10 +7,10 @@ st.markdown(
     """
     <style>
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;
+        background-color: #caf0f8;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -33,7 +33,10 @@ with cols[0].container(border=True):
         )
 
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x200?text=Gambar+VI.2+-+Contoh+Data+Terstruktur", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-6/fig2.png", use_container_width=True)
         st.caption("Gambar VI.2 Contoh Data Terstruktur")
 
     with st.container(border=True):
@@ -46,7 +49,10 @@ with cols[0].container(border=True):
         )
 
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x150?text=Gambar+VI.3+-+Perkembangan+Data", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-6/fig3.png", use_container_width=True)
         st.caption("Gambar VI.3 Perkembangan Data (Sumber: Sharma)")
 
 with cols[1].container(border=True):

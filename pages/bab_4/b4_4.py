@@ -8,10 +8,10 @@ st.markdown(
     """
     <style>
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;
+        background-color: #caf0f8;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -88,7 +88,10 @@ with cols[0].container(border=True):
 
     # Gambar IV.8 Modul-modul MES
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x300?text=Gambar+IV.8+-+Modul-modul+pada+Manufacturing+Execution+System", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-4/fig8.png", use_container_width=True)
         st.caption("Gambar IV.8 – Modul-modul pada Manufacturing Execution System (Sumber: MESA International)")
 
 # ================== KOLOM KEY TAKEAWAYS ==================

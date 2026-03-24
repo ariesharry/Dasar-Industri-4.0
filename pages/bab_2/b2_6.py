@@ -9,10 +9,10 @@ st.markdown(
     <style>
     /* Target container utama di kolom pertama */
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;   /* pink muda */
+        background-color: #caf0f8;   /* pink muda */
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -39,7 +39,10 @@ with cols[0].container(border=True):
 
     # Gambar II.8 placeholder
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x300?text=Gambar+II.8+-+Arsitektur+IoT", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-2/fig8.png", use_container_width=True)
         st.caption("Gambar II.8 – Arsitektur Internet of Things (Sumber: Soumyalatha & Hegde, S.G., 2016)")
 
     # Lapisan 1: Sensor Layer

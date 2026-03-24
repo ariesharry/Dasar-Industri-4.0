@@ -59,7 +59,7 @@ bab_list = [
             {"file": "pages/bab_2/b2_7.py", "title": "2.7 Cyber Physical System (CPS)"},
             {"file": "pages/bab_2/b2_8.py", "title": "2.8 Identifikasi dan Pengambilan Data Otomatis (AIDC)"},
             {"file": "pages/bab_2/b2_9.py", "title": "2.9 Augmented Reality (AR) dan Virtual Reality (VR)"},
-            {"file": "pages/bab_2/b2_10.py", "title": "Simulasi"},
+            {"file": "pages/bab_2/b2_10.py", "title": "Simulasi Interaktif"},
             {"file": "pages/bab_2/b2_11.py", "title": "Latihan Soal"},
         ]
     },
@@ -71,7 +71,7 @@ bab_list = [
             {"file": "pages/bab_3/b3_3.py", "title": "3.3 Klasifikasi Robot"},
             {"file": "pages/bab_3/b3_4.py", "title": "3.4 Otomatisasi dan Klasifikasinya"},
             {"file": "pages/bab_3/b3_5.py", "title": "3.5 Aplikasi Robot Otonom"},
-            {"file": "pages/bab_3/b3_6.py", "title": "3.6 Simulasi"},
+            {"file": "pages/bab_3/b3_6.py", "title": "3.6 Simulasi Interaktif"},
             {"file": "pages/bab_3/b3_7.py", "title": "3.7 Latihan Soal"},
         ]
     },
@@ -85,7 +85,7 @@ bab_list = [
             {"file": "pages/bab_4/b4_5.py", "title": "4.5 Enterprise Resource Planning (ERP)"},
             {"file": "pages/bab_4/b4_6.py", "title": "4.6 Cyber Physical Systems (CPS) based Automation"},
             {"file": "pages/bab_4/b4_7.py", "title": "4.7 Open Protocol Communication Unified Architecture (OPC-UA)"},
-            {"file": "pages/bab_4/b4_8.py", "title": "Simulasi"},
+            {"file": "pages/bab_4/b4_8.py", "title": "Simulasi Interaktif"},
             {"file": "pages/bab_4/b4_9.py", "title": "Latihan Soal"},
         ]
     },
@@ -143,8 +143,8 @@ bab_list = [
         "pages": [
             {"file": "pages/bab_9/b9_1.py", "title": "9.1 Definisi Robot Otonom"},
             {"file": "pages/bab_9/b9_2.py", "title": "9.2 Klasifikasi Robot Otonom"},
-            {"file": "pages/bab_9/b9_3.py", "title": "9.3 Aplikasi Robot Otonom"},
-            {"file": "pages/bab_9/b9_4.py", "title": "9.3 Aplikasi Robot Otonom"},
+            {"file": "pages/bab_9/b9_3.py", "title": "Simulasi Interaktif"},
+            {"file": "pages/bab_9/b9_4.py", "title": "Latihan Soal"},
         ]
     },
             {
@@ -231,7 +231,7 @@ st.sidebar.markdown(f"""
     position: fixed;
     bottom: 0px;
     width: 270px;
-    background-color: #FBEFEF;
+    background-color: #caf0f8;
 }}
 </style>
 

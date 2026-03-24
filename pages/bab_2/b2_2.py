@@ -9,10 +9,10 @@ st.markdown(
     <style>
     /* Target container utama di kolom pertama */
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;   /* pink muda */
+        background-color: #caf0f8;   /* pink muda */
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -62,11 +62,17 @@ with cols[0].container(border=True):
         )
 
         # Gambar II.3 (placeholder)
-        st.image("https://via.placeholder.com/600x200?text=Gambar+II.3+-+Konsep+Kerja+IoT", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-2/fig3.png", use_container_width=True)
         st.caption("Gambar II.3 – Konsep Kerja IoT (Sumber: mobnasesemka.com)")
 
         # Gambar II.4 (placeholder)
-        st.image("https://via.placeholder.com/600x200?text=Gambar+II.4+-+Mekanisme+Kerja+IoT", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-2/fig4.png", use_container_width=True)
         st.caption("Gambar II.4 – Mekanisme Kerja IoT")
 
         st.markdown(
@@ -96,7 +102,10 @@ with cols[0].container(border=True):
               manusia dapat berinteraksi (mengatur, memberi instruksi, mengakses data).
             """
         )
-        st.image("https://via.placeholder.com/600x250?text=Gambar+II.5+-+Contoh+Sistem+IoT", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-2/fig5.png", use_container_width=True)
         st.caption("Gambar II.5 – Contoh Sistem IoT")
 
     # Bagian 4: Empat Pilar IoT
@@ -127,7 +136,10 @@ with cols[0].container(border=True):
         df_pilar = pd.DataFrame(pilar_data)
         st.table(df_pilar)
 
-        st.image("https://via.placeholder.com/500x250?text=Gambar+II.6+-+Pilar+IoT", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-2/fig6.png", use_container_width=True)
         st.caption("Gambar II.6 – Pilar IoT (Sumber: IoTlearners.com)")
 
     # Bagian 5: Contoh Inovasi IoT Karya Anak Bangsa

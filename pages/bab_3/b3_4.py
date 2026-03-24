@@ -8,10 +8,10 @@ st.markdown(
     """
     <style>
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;
+        background-color: #caf0f8;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -59,13 +59,22 @@ with cols[0].container(border=True):
 
     # Gambar III.4, III.5, III.6
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x200?text=Gambar+III.4+-+Otomatisasi+pada+Industri+Proses", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-3/fig4.png", use_container_width=True)
         st.caption("Gambar III.4 – Otomatisasi pada Industri Proses")
 
-        st.image("https://via.placeholder.com/600x200?text=Gambar+III.5+-+Sistem+Pengendalian+Industri+4.0", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-3/fig5.png", use_container_width=True)
         st.caption("Gambar III.5 – Sistem Pengendalian Industri 4.0")
 
-        st.image("https://via.placeholder.com/600x200?text=Gambar+III.6+-+Pemantauan+Sistem+Pengendalian+Proses+Industri+4.0", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-3/fig6.png", use_container_width=True)
         st.caption("Gambar III.6 – Pemantauan Sistem Pengendalian Proses Industri 4.0 (Sumber: shell.com)")
 
     # Jenis-jenis otomatisasi
@@ -89,7 +98,10 @@ with cols[0].container(border=True):
 
     # Gambar III.7
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x250?text=Gambar+III.7+-+Otomatisasi+industri", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-3/fig7.png", use_container_width=True)
         st.caption("Gambar III.7 – Otomatisasi industri")
 
 # ================== KOLOM KEY TAKEAWAYS ==================

@@ -9,10 +9,10 @@ st.markdown(
     <style>
     /* Target container utama di kolom pertama */
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;   /* pink muda */
+        background-color: #caf0f8;   /* pink muda */
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -57,7 +57,10 @@ with cols[0].container(border=True):
 
     # Gambar II.9
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x250?text=Gambar+II.9+-+Perkembangan+dari+Internet+of+Service+menjadi+Cyber+Physical+System", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-2/fig3.png", use_container_width=True)
         st.caption("Gambar II.9 – Perkembangan dari Internet of Service menjadi Cyber Physical System (Sumber: Oztemel & Gursev, 2018)")
 
     # Bagian 3: Framework Sangmahachai
@@ -77,7 +80,10 @@ with cols[0].container(border=True):
 
     # Gambar II.10
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x250?text=Gambar+II.10+-+Hubungan+Dunia+Fisik+dengan+Dunia+Virtual+pada+CPS", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-2/fig10.png", use_container_width=True)
         st.caption("Gambar II.10 – Hubungan Dunia Fisik dengan Dunia Virtual pada CPS")
 
     # Bagian 4: Penjelasan CPS dan dunia fisik-virtual
@@ -94,7 +100,10 @@ with cols[0].container(border=True):
 
     # Gambar II.11
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x250?text=Gambar+II.11+-+Pilar+Teknologi+yang+Mendukung+CPS", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-2/fig11.png", use_container_width=True)
         st.caption("Gambar II.11 – Pilar Teknologi yang Mendukung CPS (M2M, IoT, dll.)")
 
     # Bagian 5: Pilar teknologi
@@ -108,7 +117,10 @@ with cols[0].container(border=True):
 
     # Gambar II.12
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x250?text=Gambar+II.12+-+CPS+dalam+Smart+Manufacturing", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-2/fig12.png", use_container_width=True)
         st.caption("Gambar II.12 – CPS dalam Smart Manufacturing")
 
     # Bagian 6: Masa depan CPS

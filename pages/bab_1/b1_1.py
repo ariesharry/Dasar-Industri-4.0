@@ -9,10 +9,10 @@ st.markdown(
     <style>
     /* Target container utama di kolom pertama */
     .stColumn:first-child > div:first-child {
-        background-color: #f1faee;   /* biru muda */
+        background-color: #caf0f8;   /* biru muda */
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);  /* efek bayangan ringan */
+          /* efek bayangan ringan */
     }
     /* Agar container di dalamnya tetap memiliki background putih jika perlu */
     .stColumn:first-child .stContainer {

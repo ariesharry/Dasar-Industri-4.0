@@ -9,10 +9,10 @@ st.markdown(
     <style>
     /* Target container utama di kolom pertama */
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;   /* pink muda */
+        background-color: #caf0f8;   /* pink muda */
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -62,7 +62,10 @@ with cols[0].container(border=True):
             ke konsol atau PC.
             """
         )
-        st.image("https://via.placeholder.com/500x250?text=Gambar+II.14+-+Contoh+Virtual+Reality", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-2/fig14.png", use_container_width=True)
         st.caption("Gambar II.14 – Contoh Virtual Reality (Sumber: anandtech.com)")
 
         # AR
@@ -75,7 +78,10 @@ with cols[0].container(border=True):
             digunakan untuk simulasi perang di mana prajurit masuk ke dalam dunia game dan merasakan pengalaman tempur.
             """
         )
-        st.image("https://via.placeholder.com/500x250?text=Gambar+II.15+-+Contoh+Augmented+Reality", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-2/fig15.png", use_container_width=True)
         st.caption("Gambar II.15 – Contoh Augmented Reality")
 
 # ================== KOLOM KEY TAKEAWAYS ==================

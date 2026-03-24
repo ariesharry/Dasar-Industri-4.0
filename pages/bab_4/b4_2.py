@@ -8,10 +8,10 @@ st.markdown(
     """
     <style>
     .stColumn:first-child > div:first-child {
-        background-color: #FBEFEF;
+        background-color: #caf0f8;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        
     }
     .stColumn:first-child .stContainer {
         background-color: transparent;
@@ -39,7 +39,10 @@ with cols[0].container(border=True):
 
     # Gambar IV.3
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x250?text=Gambar+IV.3+-+Diagram+komponen+PLC+secara+umum", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-4/fig3.png", use_container_width=True)
         st.caption("Gambar IV.3 – Diagram komponen PLC secara umum (Sumber: vsquareengineering.in)")
 
     # Perangkat Input
@@ -83,7 +86,10 @@ with cols[0].container(border=True):
 
     # Gambar IV.4
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x200?text=Gambar+IV.4+-+Modul+PLC", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-4/fig4.png", use_container_width=True)
         st.caption("Gambar IV.4 – Modul PLC (Sumber: esuppliersindia.com)")
 
     # Manfaat PLC
@@ -110,7 +116,10 @@ with cols[0].container(border=True):
 
     # Gambar IV.5
     with st.container(border=True):
-        st.image("https://via.placeholder.com/600x200?text=Gambar+IV.5+-+Pemanfaatan+HMI+dalam+Sistem", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-4/fig5.png", use_container_width=True)
         st.caption("Gambar IV.5 – Pemanfaatan HMI dalam Sistem")
 
 # ================== KOLOM KEY TAKEAWAYS ==================
