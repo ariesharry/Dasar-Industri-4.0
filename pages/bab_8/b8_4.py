@@ -31,7 +31,10 @@ with cols[0].container(border=True):
             Deep learning merupakan metode pembelajaran yang memanfaatkan artificial neural network yang berlapis-lapis (multilayer). DL sering juga disebut deep structured learning atau hierarchical learning atau deep neural merupakan metode pembelajaran yang memanfaatkan multiplenon linier transformation. Gambar VIII.6 menjelaskan bahwa DL adalah bidang kecerdasan buatan yang berdasarkan jaringan saraf tiruan, yaitu menggunakan struktur algoritma berlapis-lapis yang disebut jaringan saraf. Metode ini merupakan bagian dari machine learning yang algoritmanya membutuhkan data untuk belajar menyelesaikan tugas. Model Deep Learning cenderung meningkatkan akurasi dengan semakin banyaknya data pelatihan. X sebagai input data yang diproses secara berlapis dengan output dari layer sebelumnya akan menjadi input bagi layer sesudahnya dan Y sebagai outputnya.
             """
         )
-        st.image("https://via.placeholder.com/600x250?text=Gambar+VIII.6+-+Ilustrasi+Multilayer+Artificial+Neural+Networks", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-8/fig6.png", use_container_width=True)
         st.caption("Gambar VIII.6 Ilustrasi Multilayer Artificial Neural Networks (Sumber: deeplearning-academy.com)")
 
         st.markdown(

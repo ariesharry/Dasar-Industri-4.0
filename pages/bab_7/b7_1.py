@@ -33,7 +33,41 @@ with cols[0].container(border=True):
             Simulasi (simulation) merupakan sekumpulan metode dan aplikasi yang digunakan untuk meniru perilaku dari suatu sistem nyata. Simulasi dilakukan saat hubungan variabel yang ada pada suatu sistem sangat rumit. Simulasi pada umumnya dilakukan menggunakan bantuan komputer atau software tertentu (Kelton dkk, 2010). Simulasi merupakan salah satu metode di bidang operations research dan management science yang paling sering digunakan dalam menganalisis suatu sistem. Umumnya hasil dari analisis akan digunakan sebagai pertimbangan untuk pengambilan keputusan yang bersifat strategis untuk meningkatkan kinerja sistem, misalkan dari sisi kapasitas, produktivitas, efisiensi, dan variabel keputusan sistem lainnya. Untuk dapat mencapai hal ini maka perlu dibangun dulu suatu model yang merepresentasikan sistem nyata, kemudian dilakukan verifikasi dan validasi terhadap model tersebut. Apabila model sudah dipastikan valid, maka selanjutnya dapat dilakukan eksperimen pada model simulasi tersebut dengan melakukan perubahan pada parameter sistem untuk melihat pengaruhnya terhadap variabel keputusan yang diamati. Logika dari metodologi simulasi ini ditampilkan pada Gambar VII.1:
             """
         )
-        st.image("https://via.placeholder.com/600x300?text=Gambar+VII.1+-+Metodologi+Simulasi", use_container_width=True)
+        with st.container():
+            # Buat 3 kolom untuk center (kiri - tengah - kanan)
+            col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
+
+            with col2:
+                # Embed video
+                st.markdown(
+                    """
+                    <div style="
+                        border-radius: 10px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                        margin-bottom: 30px;
+                    ">
+                        <iframe 
+                            width="100%" 
+                            height="400" 
+                            src="https://www.youtube.com/embed/7QU769TkTfE"
+                            title="YouTube video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+        
+        with st.container(border=True):
+            st.markdown("### 🖼️ Ilustrasi Arsitektur Komputasi Awan")
+
+            col1, col2, col3 = st.columns([1, 2, 1])
+
+            with col2:
+                st.image("assets/bab-7/fig1.png", use_container_width=True)
         st.caption("Gambar VII.1 Metodologi Simulasi (Sumber: diadaptasi dari Gallien, 2003)")
 
         st.markdown(

@@ -31,7 +31,10 @@ with cols[0].container(border=True):
             Saat ini, AI didasarkan pada pembelajaran mesin, dan pembelajaran mesin pada dasarnya berbeda dari statistik. Pembelajaran mesin memiliki basis statistik, tetapi beberapa asumsi memiliki perbedaan dengan statistik karena tujuannya berbeda (Mueller, J. P. & Massaron, L., 2016). Sedangkan, Müller, A. C. & Guido, S. (2016) menjelaskan bahwa pembelajaran mesin adalah tentang mengekstraksi pengetahuan dari data. ML merupakan bidang penelitian antara ilmu statistik, kecerdasan buatan, dan ilmu komputer dan juga dikenal sebagai analitik prediktif atau pembelajaran statistik. Pembelajaran mesin (Machine Learning) adalah pemograman komputer untuk mencapai kriteria/performance tertentu dengan menggunakan sekumpulan data yang dilatih atau pengalaman masa lalu (Primartha, R., 2018). ML melibatkan berbagai disiplin ilmu seperti statistika, ilmu komputer, matematika, bahkan neurologi. Ilmu statistika digunakan untuk membuat model matematika baik bersifat prediksi maupun deskriptif atau gabungan keduanya. ML dianalogikan sebagai buku resep masakan dan algoritma dianalogikan sebagai pisau. Semakin sesuai ukuran dan tajam pisaunya maka semakin mudah koki untuk memotong bahan makanan. Pembelajaran mesin sangat penting karena memungkinkan dengan cepat dan otomatis menghasilkan model yang dapat menganalisis data yang lebih besar, lebih kompleks, dan memberikan hasil lebih cepat dan lebih akurat, bahkan dalam skala yang sangat besar. Dengan membangun model yang tepat, organisasi memiliki peluang yang lebih baik untuk mengidentifikasi peluang yang menguntungkan atau menghindari risiko yang tidak diketahui.
             """
         )
-        st.image("https://via.placeholder.com/600x250?text=Gambar+VIII.5+-+Kategori+Machine+Learning", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-8/fig5.png", use_container_width=True)
         st.caption("Gambar VIII.5 Kategori Machine Learning (Sumber: data-flair.training)")
 
         st.markdown(

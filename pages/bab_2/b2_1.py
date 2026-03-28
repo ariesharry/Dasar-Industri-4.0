@@ -43,6 +43,34 @@ with cols[0].container(border=True):
             lingkungan virtual buatan manusia, menciptakan apa yang disebut **Internet of Things (IoT)**.
             """
         )
+    
+    with st.container():
+        # Buat 3 kolom untuk center (kiri - tengah - kanan)
+        col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
+
+        with col2:
+            # Embed video
+            st.markdown(
+                """
+                <div style="
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                    margin-bottom: 30px;
+                ">
+                    <iframe 
+                        width="100%" 
+                        height="400" 
+                        src="https://www.youtube.com/embed/n-f8B76Hozk"
+                        title="YouTube video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
     # Bagian 2: Contoh Aplikasi IoT (Gojek, Qlue, LinkAja)
     with st.container(border=True):

@@ -32,6 +32,18 @@ with cols[0].container(border=True):
 
             Gambar VIII.2 menggambarkan inti masalah kecerdasan buatan mencakup pemrograman komputer dengan kriteria atau klasifikasi sebagai berikut (Martin, 2015):
 
+            """
+        )
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-8/fig2.png", use_container_width=True)
+
+        st.caption("Gambar VIII.2 Inti masalah kecerdasan buatan")
+
+        st.markdown(
+            """
+
             1. Deduction, reasoning, and problem solving
             Pada awal penelitian AI, proses penalaran diinduksi melalui langkah-langkah meniru proses manusia dalam menyelesaikan teka-teki atau deduksi logis. Namun,
 
@@ -56,10 +68,12 @@ with cols[0].container(border=True):
             8. Social Intelligence
             Kecerdasan sosial (Social Intelligence) adalah istilah umum antara berbagai disiplin ilmu termasuk filsafat, ilmu sosial / sosiologi, ekonomi, ilmu hukum, psikologi, dll, dan ilmu komputer. Secara umum, kecerdasan sosial adalah kemampuan untuk memahami orang lain dan bertindak secara rasional dan emosional dalam hubungan dengan orang lain. Ini adalah kemampuan yang tidak hanya dimiliki oleh manusia tetapi juga agen buatan, sebagaimana dimodelkan dalam kecerdasan buatan dan penelitian berbasis agen pada khususnya (Herzig, A., dkk, 2017).
 
-            <center>Mekanisme Kinerja</center>
             """
         )
-        st.image("https://via.placeholder.com/600x250?text=Gambar+VIII.3+-+Mekanisme+Kerja+Kecerdasan+Buatan", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-8/fig3.png", use_container_width=True)
         st.caption("Gambar VIII.3 Mekanisme Kerja Kecerdasan Buatan (Artificial Intelligence)")
 
         st.markdown(
@@ -69,7 +83,10 @@ with cols[0].container(border=True):
             Artificial intelligence, Machine Learning dan Deep Learning menjadi trending topik dunia dalam berbagai unit aspek bisnis. Hubungan antara ketiga istilah tersebut diibaratkan AI sebagai payung yang lebih luas di mana ML dan DL berada dalam lingkupnya. Primartha, R. (2018) menjelaskan bahwa AI berbicara tentang konsep umum, bagaimana melakukannya, metode apa yang digunakan, dan hal-hal teknis lainnya yang belum dapat didefiniskan secara detail. Gambar VIII.4. memperlihatkan bahwa ML dan DL merupakan cabang atau bagian dari AI. Tugas machine learning adalah melatih mesin untuk belajar menggunakan algoritma yang umum dengan memberi data, lalu algoritma itu akan mencari hal-hal yang menarik dalam data yang kita berikan, hingga akhirnya sistem AI akan membangun pengetahuan berdasarkan data tersebut. Sedangkan DL merupakan subset dari ML yang membuat komputasi jaringan saraf multi layer yang layak.
             """
         )
-        st.image("https://via.placeholder.com/600x250?text=Gambar+VIII.4+-+Keterkaitan+AI,+ML,+dan+DL", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-8/fig4.png", use_container_width=True)
         st.caption("Gambar VIII.4 Keterkaitan antara AI, ML, dan DL")
 
 # ================== KOLOM KEY TAKEAWAYS ==================
