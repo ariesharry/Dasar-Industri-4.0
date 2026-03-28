@@ -4,6 +4,24 @@ import av
 from ultralytics import YOLO
 from streamlit_webrtc import webrtc_streamer, VideoProcessorBase, WebRtcMode
 
+import os
+from twilio.rest import Client
+import streamlit as st
+
+@st.cache_resource
+def get_ice_servers():
+    """Fetch TURN servers from Twilio (fallback to Google STUN if credentials missing)."""
+    try:
+        account_sid = os.environ["TWILIO_ACCOUNT_SID"]
+        auth_token = os.environ["TWILIO_AUTH_TOKEN"]
+    except KeyError:
+        st.warning("Twilio credentials not found. Falling back to free STUN server. This may fail on Streamlit Cloud.")
+        return [{"urls": ["stun:stun.l.google.com:19302"]}]
+
+    client = Client(account_sid, auth_token)
+    token = client.tokens.create()
+    return token.ice_servers
+
 # Load YOLO model (cached for performance)
 @st.cache_resource
 def load_model():
@@ -51,6 +69,7 @@ with col2:
         video_processor_factory=ObjectDetectionProcessor,
         media_stream_constraints={"video": True, "audio": False},
         async_processing=True,
+        rtc_configuration={"iceServers": get_ice_servers()}  # <-- add this
     )
 
 st.info("Detection runs on each frame. For better performance, ensure your system has a GPU or use a lighter model.")
