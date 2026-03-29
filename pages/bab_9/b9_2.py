@@ -48,7 +48,10 @@ with cols[0].container(border=True):
             - Pada tahap ini juga dilakukan **risk assessment** untuk memilah ancaman yang paling berpotensi merugikan.
             """
         )
-        st.image("https://via.placeholder.com/600x250?text=Gambar+IX.5+-+Butir-butir+untuk+Mengidentifikasi+Resiko", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-9/fig5.png", use_container_width=True)
         st.caption("Gambar IX.5 Butir-butir untuk Mengidentifikasi Resiko")
 
     # Risk Control

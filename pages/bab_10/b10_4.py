@@ -66,7 +66,10 @@ with cols[0].container(border=True):
         st.table(df_kk)
         st.caption("Sumber: Gonzales dkk (2018)")
 
-        st.image("https://via.placeholder.com/600x250?text=Gambar+X.2+-+Perbedaan+Manufaktur+Subtraktif+dan+Aditif", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-10/fig2.png", use_container_width=True)
         st.caption("Gambar X.2 Perbedaan Antara Manufaktur Subtraktif dan Manufaktur Aditif (Sumber: cmac.com.au)")
 
 # ================== KOLOM KEY TAKEAWAYS ==================

@@ -37,7 +37,10 @@ with cols[0].container(border=True):
             5. **Setelah komponen tersebut selesai diproduksi**, mungkin perlu dilakukan tahap berikutnya yaitu paska-pemrosesan. Namun masing-masing teknologi dapat membutuhkan metode yang berbeda-beda. Sebagai contoh, pada paska pemrosesan diperlukan penghilangan penopang struktur, dibutuhkan pengangkatan hasil produksi dengan alat mekanis, diperlukan perawatan lebih lanjut tergantung pada teknologi AM yang digunakan (misal fine machining, perawatan panas, pemolesan, dll.).
             """
         )
-        st.image("https://via.placeholder.com/600x250?text=Gambar+X.1+-+Prinsip+kerja+manufaktur+aditif", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-10/fig1.png", use_container_width=True)
         st.caption("Gambar X.1 Prinsip kerja manufaktur aditif (Sumber: researchgate.net)")
 
 # ================== KOLOM KEY TAKEAWAYS ==================

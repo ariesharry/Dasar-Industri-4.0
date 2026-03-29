@@ -37,6 +37,35 @@ with cols[0].container(border=True):
             """
         )
 
+
+    with st.container():
+        # Buat 3 kolom untuk center (kiri - tengah - kanan)
+        col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
+
+        with col2:
+            # Embed video
+            st.markdown(
+                """
+                <div style="
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                    margin-bottom: 30px;
+                ">
+                    <iframe 
+                        width="100%" 
+                        height="400" 
+                        src="https://www.youtube.com/embed/shQEXpUwaIY"
+                        title="YouTube video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
     # Information Security dan CIA Triangle
     with st.container(border=True):
         st.markdown(
@@ -199,7 +228,10 @@ with cols[0].container(border=True):
             **Ilustrasi ancaman** dapat berasal dari kekuatan asing, pesaing, peretas terorganisir, orang dalam, konfigurasi buruk, dan vendor pihak ketiga.
             """
         )
-        st.image("https://via.placeholder.com/600x250?text=Gambar+IX.1+-+Berbagai+Ancaman+pada+Sistem+Pengendalian+Proses", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-9/fig1.png", use_container_width=True)
         st.caption("Gambar IX.1 Berbagai Ancaman pada Sistem Pengendalian Proses (Sumber: mocana.com)")
 
     # Industrial Control System (ICS)
@@ -210,7 +242,10 @@ with cols[0].container(border=True):
             ICS adalah istilah umum yang mencakup sistem kontrol dan instrumentasi untuk kontrol proses industri. Sistem dapat berkisar dari pengontrol panel modular hingga sistem kontrol terdistribusi besar. Semua sistem menerima data dari sensor, membandingkan dengan set point, dan mengendalikan proses melalui elemen kontrol akhir (katup, dll). Sistem besar biasanya menggunakan SCADA, DCS, atau PLC.
             """
         )
-        st.image("https://via.placeholder.com/600x250?text=Gambar+IX.2+-+Jalur+Serangan+Siber+pada+Collaborative+Robotic+Cyber+Physical+System", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-9/fig2.png", use_container_width=True)
         st.caption("Gambar IX.2 Jalur Serangan Siber Pada Collaborative Robotic Cyber Physical System")
 
     # Serangan Siber
@@ -220,7 +255,10 @@ with cols[0].container(border=True):
             **Serangan siber (cyber-attack)** adalah manuver ofensif yang menargetkan sistem informasi, infrastruktur, jaringan, atau perangkat komputer dengan tindakan berbahaya untuk mencuri, mengubah, atau menghancurkan target. Serangan dapat berupa kampanye siber, perang siber, atau terorisme siber. Contoh canggih: worm Stuxnet. Analisis perilaku pengguna dan SIEM digunakan untuk pencegahan.
             """
         )
-        st.image("https://via.placeholder.com/600x250?text=Gambar+IX.3+-+Bagaimana+Ancaman+Siber+Menyerang+Konvergensi+IT,+OT,+dan+IP", use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+        with col2:
+            st.image("assets/bab-9/fig3.png", use_container_width=True)
         st.caption("Gambar IX.3 Bagaimana Ancaman Siber yang Menyerang Konvergensi IT, OT, dan IP")
 
     # Konvergensi IT dan OT
