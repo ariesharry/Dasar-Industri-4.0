@@ -9,7 +9,7 @@ st.markdown(
     <style>
     /* Target container utama di kolom pertama */
     .stColumn:first-child > div:first-child {
-        background-color: #caf0f8;   /* pink muda */
+        background-color: #7FA8FF;   /* pink muda */
         border-radius: 20px;
         padding: 20px;
         

@@ -49,7 +49,7 @@ showSidebarBorder = true
 chartCategoricalColors = ["#0ea5e9", "#059669", "#fbbf24"]
 
 [theme.sidebar]
-backgroundColor = "#caf0f8"
+backgroundColor = "#7FA8FF"
 secondaryBackgroundColor = "#ecebe3"
 headingFontSizes = ["1.6rem", "1.4rem", "1.2rem"]
 dataframeHeaderBackgroundColor = "#e4e4e0"

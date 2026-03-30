@@ -231,7 +231,7 @@ st.sidebar.markdown(f"""
     position: fixed;
     bottom: 0px;
     width: 270px;
-    background-color: #caf0f8;
+    background-color: #7FA8FF;
 }}
 </style>
 
