@@ -126,8 +126,8 @@ st.markdown("""
 # Konten cover
 st.markdown("""
 <div class="cover-content">
-    <div class="main-title">DASAR INDUSTRI 4.0</div>
     <div class="sub-title">E-MODUL INTERAKTIF</div>
+    <div class="main-title">DASAR INDUSTRI 4.0</div>
     <div class="divider"></div>
     <div style="font-size: 1.2rem; max-width: 700px; margin-top: 2rem; opacity:0.8; animation: fadeInUp 2.2s ease;">
         Memahami konsep, teknologi, dan implementasi revolusi industri keempat<br>
