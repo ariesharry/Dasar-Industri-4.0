@@ -1,0 +1,4 @@
+.streamlit/secrets.toml
+yolo26n.pt
+yolov8n.pt
+venv/
