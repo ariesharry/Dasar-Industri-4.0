@@ -9,6 +9,26 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed"
 )
+import base64
+st.markdown("""
+<div class="logo-container">
+    <img src="data:image/png;base64,{}" width="200">
+</div>
+""".format(
+    base64.b64encode(open("assets/logo-pk.png", "rb").read()).decode()
+), unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # CSS kustom untuk tampilan cover (tema biru)
 st.markdown("""
@@ -31,7 +51,7 @@ st.markdown("""
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 90vh;
+        min-height: 70vh;
         text-align: center;
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -113,12 +133,5 @@ st.markdown("""
         Memahami konsep, teknologi, dan implementasi revolusi industri keempat<br>
         untuk menghadapi era digital
     </div>
-</div>
-""", unsafe_allow_html=True)
-
-# Footer kecil (opsional) untuk informasi tambahan
-st.markdown("""
-<div style="position: fixed; bottom: 30px; left: 30px; color: rgba(255,255,255,0.5); font-size: 0.8rem; font-family: sans-serif;">
-    © 2025 | Pendidikan Vokasi
 </div>
 """, unsafe_allow_html=True)
