@@ -25,6 +25,32 @@ cols = st.columns([0.7, 0.3])
 
 # ================== KOLOM MATERI UTAMA ==================
 with cols[0].container(border=True):
+
+    st.markdown(
+        """
+        <h1 style='text-align: center;'>📘 BAB 7</h1>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Container isi
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🎯 Capaian Pembelajaran
+            
+            Mahasiswa mampu memahami pengetahuan tentang **simulasi**, meliputi:
+            
+            1. **Pengertian simulasi**  
+            
+            2. **Jenis-jenis simulasi**  
+            
+            3. **Simulasi dalam Industri 4.0**  
+            
+            4. **Digital Twin**  
+            """
+        )
+        
     st.title("Pengertian dan Tujuan Simulasi")
 
     with st.container(border=True):

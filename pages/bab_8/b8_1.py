@@ -25,6 +25,29 @@ cols = st.columns([0.7, 0.3])
 
 # ================== KOLOM MATERI UTAMA ==================
 with cols[0].container(border=True):
+    st.markdown(
+        """
+        <h1 style='text-align: center;'>📘 BAB 8</h1>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Container isi
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🎯 Capaian Pembelajaran
+            
+            Mahasiswa mampu memahami pengetahuan tentang **Kecerdasan Buatan (AI)**, meliputi:
+            
+            1. **Artificial Intelligence vs Machine Learning vs Deep Learning**  
+            
+            2. **Aplikasi AI yang potensial pada industri**  
+            
+            3. **Sejarah dan definisi Kecerdasan Buatan (Artificial Intelligence)**  
+            """
+        )
+        
     st.title("Sejarah dan Definisi Kecerdasan Buatan (Artificial Intelligence)")
 
     with st.container(border=True):

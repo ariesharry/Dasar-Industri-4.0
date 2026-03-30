@@ -25,6 +25,34 @@ cols = st.columns([0.7, 0.3])
 
 # ================== KOLOM MATERI UTAMA ==================
 with cols[0].container(border=True):
+    st.markdown(
+        """
+        <h1 style='text-align: center;'>📘 BAB 4</h1>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Container isi
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🎯 Capaian Pembelajaran
+            
+            Mahasiswa mampu memahami pengetahuan tentang **Sistem Integrasi Vertikal dan Horizontal**, meliputi:
+            
+            1. **Piramida otomatisasi**  
+            
+            2. **Programmable Logic Controller (PLC)** dan perangkat pendukung lainnya  
+            
+            3. **Manufacturing Execution System (MES)**  
+            
+            4. **Enterprise Resource Planning (ERP)**  
+            
+            5. **Cyber Physical System (CPS) based Automation**  
+            
+            6. **Open Platform Communication Unified Architecture (OPC UA)**  
+            """
+        )
     st.title("Piramida Otomatisasi")
 
     # Pengertian piramida otomatisasi

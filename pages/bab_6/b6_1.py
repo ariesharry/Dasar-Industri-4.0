@@ -25,6 +25,23 @@ cols = st.columns([0.7, 0.3])
 
 # ================== KOLOM MATERI UTAMA ==================
 with cols[0].container(border=True):
+    st.markdown(
+        """
+        <h1 style='text-align: center;'>📘 BAB 6</h1>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Container isi
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🎯 Capaian Pembelajaran
+            
+            Mahasiswa mampu memahami pengetahuan tentang **Big Data Analytics**.
+            """
+        )
+        
     st.title("Pengertian, Karakteristik dan Manfaat Big Data")
 
     with st.container(border=True):

@@ -25,6 +25,33 @@ cols = st.columns([0.7, 0.3])
 
 # ================== KOLOM MATERI UTAMA ==================
 with cols[0].container(border=True):
+    st.markdown(
+        """
+        <h1 style='text-align: center;'>📘 BAB 10</h1>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Container isi
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🎯 Capaian Pembelajaran
+            
+            Mahasiswa mampu mengetahui dan memahami pengetahuan tentang **manufaktur aditif**, meliputi:
+            
+            1. **Definisi manufaktur aditif**  
+            
+            2. **Prinsip kerja manufaktur aditif**  
+            
+            3. **Teknologi manufaktur aditif**  
+            
+            4. **Kelebihan dan kekurangan teknologi manufaktur aditif**  
+            
+            5. **Aplikasi manufaktur aditif**  
+            """
+        )
+
     st.title("Definisi Manufaktur Aditif")
 
     with st.container(border=True):

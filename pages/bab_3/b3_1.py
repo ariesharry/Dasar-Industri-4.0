@@ -26,6 +26,29 @@ cols = st.columns([0.7, 0.3])
 
 # ================== KOLOM MATERI UTAMA ==================
 with cols[0].container(border=True):
+    st.markdown(
+        """
+        <h1 style='text-align: center;'>📘 BAB 3</h1>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Container isi
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🎯 Capaian Pembelajaran
+            
+            Mahasiswa mampu memahami pengetahuan tentang:
+            
+            1. **Robot otonom**  
+            
+            2. **Definisi dan klasifikasi robot**  
+            
+            3. **Otomatisasi**, **industrial robot**, dan **collaborative robot (cobot)**  
+            """
+        )
+        
     st.title("Robot Otonom")
 
     # Bagian 1: Pengantar Robot Otonom

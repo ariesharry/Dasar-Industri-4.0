@@ -25,8 +25,35 @@ st.markdown(
 
 cols = st.columns([0.7, 0.3])
 
+
+
 # ================== KOLOM MATERI UTAMA ==================
 with cols[0].container(border=True):   # container utama dengan background biru muda
+
+    # Judul besar (center)
+    st.markdown(
+        """
+        <h1 style='text-align: center;'>📘 BAB 1</h1>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Container isi
+    with st.container(border=True):
+        st.markdown(
+            """
+            ### 🎯 Capaian Pembelajaran
+            
+            Mahasiswa mampu memahami pengetahuan tentang **Revolusi Industri 4.0**, meliputi:
+            
+            - Definisi Industri 4.0  
+            - Model arsitektur Industri 4.0  
+            - Karakteristik Industri 4.0  
+            - Prinsip desain Industri 4.0  
+            - Manfaat penerapan Industri 4.0  
+            """
+        )
+        
     st.title("Definisi Industri 4.0")
     
     # Bagian 1: Asal Usul

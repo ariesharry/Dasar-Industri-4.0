@@ -26,6 +26,28 @@ cols = st.columns([0.7, 0.3])
 
 # ================== KOLOM MATERI UTAMA ==================
 with cols[0].container(border=True):
+    st.markdown(
+        """
+        <h1 style='text-align: center;'>📘 BAB 2</h1>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Container isi
+    with st.container(border=True):
+        st.markdown(
+            """
+            
+            ### 🎯 Capaian Pembelajaran
+            
+            Mahasiswa mampu memahami pengetahuan tentang:
+            
+            1. **Internet of Things (IoT)**, **Industrial Internet of Things (IIoT)**, 
+            dan **Internet of Services (IoS)**  
+            
+            2. **Cyber Physical System (CPS)** dan konsep **digital/smart manufacturing**  
+            """
+        )
     st.title("Sejarah Internet of Things")
 
     # Bagian 1: Pengertian dan Dampak IoT
