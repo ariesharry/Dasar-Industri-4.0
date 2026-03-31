@@ -7,7 +7,7 @@ st.markdown(
     """
     <style>
     .stColumn:first-child > div:first-child {
-        background-color: #C7DBFF;
+        background-color: #7FA8FF;
         border-radius: 20px;
         padding: 20px;
     }
