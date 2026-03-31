@@ -9,7 +9,7 @@ st.markdown(
     <style>
     /* Target container utama di kolom pertama */
     .stColumn:first-child > div:first-child {
-        background-color: #7FA8FF;   /* biru muda */
+        background-color: #C7DBFF;   /* biru muda */
         border-radius: 20px;
         padding: 20px;
           /* efek bayangan ringan */
